@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <kbd>art</kbd> + <kbd>ctrl</kbd> + <kbd>K</kbd>
+  <kbd>ESC</kbd>
+  <button onclick="doit()">클릭</button>
+
+  <select name="fruits">
+    <optgroup label="내가 좋아하는 과일">
+      <option>Banana</option>
+      <option>Carrot</option>
+      <option>Digree</option>
+    </optgroup>
+    <optgroup label="내가 싫어하는 과일">
+      <option selected>Digree</option>
+      <option>Element</option>
+      <option>Fruit</option>
+      <option>Banana</option>
+      <option>Carrot</option>
+    </optgroup>
+  </select>
+
+  <script>
+    function doit() {
+      alert('클릭했습니다.');
+    }
+  </script>
+</body>
+
+</html>
