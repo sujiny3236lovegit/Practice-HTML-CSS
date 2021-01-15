@@ -17,7 +17,7 @@
     margin-bottom: 20px;
   }
   .container {
-    width: 200px;
+    width: 550px;
     height: 180px;
     background: #643BFF;
     margin-bottom: 10px;
@@ -30,30 +30,26 @@
     font-size: 40px;
     color: #fff;
     height: 150px;
+    flex-basis: 120px;
   }
   .item:nth-child(1) { background: #FFC447; }
   .item:nth-child(2) { background: #E87635; }
   .item:nth-child(3) { background: #FF4847; }
   .item:nth-child(4) { background: #D335E8; }
 
-  .container1 .item:nth-child(1) { flex-grow: 0; }
-  .container1 .item:nth-child(2) { flex-grow: 0; }
-  .container1 .item:nth-child(3) { flex-grow: 0; }
-  .container1 .item:nth-child(4) { flex-grow: 1; }
+  .container2 .item:nth-child(1) { flex-shrink: 1; }
+  .container2 .item:nth-child(2) { flex-shrink: 2; }
+  .container2 .item:nth-child(3) { flex-shrink: 0; }
+  .container2 .item:nth-child(4) { flex-shrink: 0; }
 
-  .container2 .item:nth-child(1) { flex-grow: 1; }
-  .container2 .item:nth-child(2) { flex-grow: 3; }
-  .container2 .item:nth-child(3) { flex-grow: 1; }
-  .container2 .item:nth-child(4) { flex-grow: 0; }
-
-  .container3 .item:nth-child(1) { flex-grow: 1; }
-  .container3 .item:nth-child(2) { flex-grow: 2; }
-  .container3 .item:nth-child(3) { flex-grow: 1; }
-  .container3 .item:nth-child(4) { flex-grow: 2; }
+  .container3 .item:nth-child(1) { flex-shrink: 1; }
+  .container3 .item:nth-child(2) { flex-shrink: 4; }
+  .container3 .item:nth-child(3) { flex-shrink: 1; }
+  .container3 .item:nth-child(4) { flex-shrink: 1; }
   </style>
   <script>
   TweenMax.to('.container', 8, {
-    width: 700,
+    width: 200,
     repeat: -1,
     repeatDelay: 2,
     yoyo: true,
@@ -62,27 +58,27 @@
   </script>
 </head>
 <body>
-  <h1>flex-grow: </h1>
+  <h1>flex-shrink: </h1>
 
 <div class="container container1">
-  <div class="item">0</div>
-  <div class="item">0</div>
-  <div class="item">0</div>
+  <div class="item">1</div>
+  <div class="item">1</div>
+  <div class="item">1</div>
   <div class="item">1</div>
 </div>
 
 <div class="container container2">
   <div class="item">1</div>
-  <div class="item">3</div>
-  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">0</div>
   <div class="item">0</div>
 </div>
 
 <div class="container container3">
   <div class="item">1</div>
-  <div class="item">2</div>
+  <div class="item">4</div>
   <div class="item">1</div>
-  <div class="item">2</div>
+  <div class="item">1</div>
 </div>
 </body>
 </html>
